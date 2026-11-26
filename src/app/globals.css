@@ -1,26 +1,58 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --navy-950: #061326;
+  --navy-900: #0b2240;
+  --navy-800: #102d54;
+  --amber-500: #e68a00;
+  --amber-400: #f59e0b;
+  --ice-100: #e5effa;
+  --ice-50: #f4f7fb;
+  --cyan-tech: #38bdf8;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Architectural blueprint subtle grid background */
+.bg-blueprint-grid {
+  background-image:
+    linear-gradient(to right, rgba(56, 189, 248, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 189, 248, 0.07) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.bg-blueprint-grid-light {
+  background-image:
+    linear-gradient(to right, rgba(11, 34, 64, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(11, 34, 64, 0.045) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Blueprint wireframe filter effect for interactive CAD/Reality comparator */
+.blueprint-filter {
+  filter: grayscale(100%) contrast(165%) brightness(108%) invert(100%);
+  mix-blend-mode: screen;
+}
+
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0b2240;
 }
