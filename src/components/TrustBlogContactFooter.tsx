@@ -67,15 +67,15 @@ export function TrustBlogContactFooter() {
   return (
     <>
       {/* SECTION 7: TRUST PILLARS (SOFT ICE BLUE) */}
-      <section className="py-20 lg:py-24 bg-[#E3EDF8] border-y border-[#CFE0F5]">
+      <section className="py-20 lg:py-24 bg-[#F2EDE4] border-y border-[#D9D2C5]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl space-y-3 mb-12">
-            <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-[0.2em] text-[#0B2240]">
-              <span className="h-[2px] w-6 bg-[#E68A00]" />
+            <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-[0.2em] text-[#0F2A44]">
+              <span className="h-[2px] w-6 bg-[#C46A2B]" />
               Valor Agregado
             </div>
             <RevealMask>
-              <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-[#0B2240]">
+              <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-[#0F2A44]">
                 Más que ingeniería, soluciones que generan confianza.
               </h2>
             </RevealMask>
@@ -100,14 +100,14 @@ export function TrustBlogContactFooter() {
                   className="rounded-2xl bg-white/80 backdrop-blur-md border border-white p-6 shadow-sm hover:shadow-lg transition-all"
                 >
                   <div className="flex items-center justify-between mb-5">
-                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#0B2240] text-white">
-                      <Icon className="h-5 w-5 text-[#F59E0B]" />
+                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#0F2A44] text-white">
+                      <Icon className="h-5 w-5 text-[#C46A2B]" />
                     </div>
-                    <span className="font-mono text-xs font-bold text-[#0B2240]/40">
+                    <span className="font-mono text-xs font-bold text-[#0F2A44]/40">
                       {pillar.number}
                     </span>
                   </div>
-                  <h3 className="font-display text-lg font-bold text-[#0B2240] mb-2">
+                  <h3 className="font-display text-lg font-bold text-[#0F2A44] mb-2">
                     {pillar.title}
                   </h3>
                   <p className="text-sm text-slate-600 leading-relaxed">
@@ -125,18 +125,18 @@ export function TrustBlogContactFooter() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
             <div className="space-y-3 max-w-xl">
-              <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-[0.2em] text-[#E68A00]">
-                <span className="h-[2px] w-6 bg-[#E68A00]" />
-                Publicaciones Técnicas
+              <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-[0.2em] text-[#C46A2B]">
+                <span className="h-[2px] w-6 bg-[#C46A2B]" />
+                Novedades & Academia
               </div>
               <RevealMask>
-                <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-[#0B2240]">
-                  Conocimiento que construye el futuro
+                <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-[#0F2A44]">
+                  Novedades Tecnológicas y Metodología
                 </h2>
               </RevealMask>
             </div>
             <span className="font-mono text-xs text-slate-500 uppercase tracking-wider">
-              Artículos & Guías Técnicas
+              RCM© · 9 Pasos · Geotechtips
             </span>
           </div>
 
@@ -162,7 +162,7 @@ export function TrustBlogContactFooter() {
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-108"
                   />
-                  <span className="absolute top-3.5 left-3.5 rounded-full bg-[#0B2240]/90 px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-wider text-white">
+                  <span className="absolute top-3.5 left-3.5 rounded-full bg-[#0F2A44]/90 px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-wider text-white">
                     {article.category}
                   </span>
                 </div>
@@ -174,7 +174,7 @@ export function TrustBlogContactFooter() {
                       <span>·</span>
                       <span>{article.readTime}</span>
                     </div>
-                    <h3 className="font-display text-lg font-bold text-[#0B2240] group-hover:text-[#E68A00] transition-colors leading-snug">
+                    <h3 className="font-display text-lg font-bold text-[#0F2A44] group-hover:text-[#C46A2B] transition-colors leading-snug">
                       {article.title}
                     </h3>
                     <p className="text-sm text-slate-600 line-clamp-3 leading-relaxed">
@@ -182,7 +182,7 @@ export function TrustBlogContactFooter() {
                     </p>
                   </div>
 
-                  <div className="pt-2 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#0B2240] group-hover:text-[#E68A00]">
+                  <div className="pt-2 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#0F2A44] group-hover:text-[#C46A2B]">
                     <span>Leer artículo completo</span>
                     <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
                   </div>
@@ -196,7 +196,7 @@ export function TrustBlogContactFooter() {
       {/* SECTION 9: CONTACT CTA & LEAD FORM */}
       <section
         id="contacto"
-        className="relative py-20 lg:py-28 bg-[#0B2240] text-white overflow-hidden"
+        className="relative py-20 lg:py-28 bg-[#0F2A44] text-white overflow-hidden"
       >
         <div className="absolute inset-0 bg-blueprint-grid opacity-65 pointer-events-none" />
 
@@ -205,8 +205,8 @@ export function TrustBlogContactFooter() {
             {/* Left Info */}
             <div className="lg:col-span-5 space-y-8 pt-2">
               <div className="space-y-4">
-                <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-[0.2em] text-[#F59E0B]">
-                  <span className="h-[2px] w-6 bg-[#F59E0B]" />
+                <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-[0.2em] text-[#C46A2B]">
+                  <span className="h-[2px] w-6 bg-[#C46A2B]" />
                   Contacto Directo
                 </div>
                 <RevealMask>
@@ -263,7 +263,7 @@ export function TrustBlogContactFooter() {
                       }`}
                     >
                       <div className="flex items-center gap-3.5">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#E68A00]/15 text-[#F59E0B]">
+                        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#C46A2B]/15 text-[#C46A2B]">
                           <Icon className="h-5 w-5" />
                         </div>
                         <div>
@@ -300,7 +300,7 @@ export function TrustBlogContactFooter() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.65, ease: EASE_ARCHITECTURAL }}
-                className="rounded-3xl bg-white text-[#0B2240] p-6 sm:p-8 lg:p-10 shadow-2xl"
+                className="rounded-3xl bg-white text-[#0F2A44] p-6 sm:p-8 lg:p-10 shadow-2xl"
               >
                 {formSubmitted ? (
                   <motion.div
@@ -311,18 +311,18 @@ export function TrustBlogContactFooter() {
                     <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
                       <CheckCircle2 className="h-9 w-9" />
                     </div>
-                    <h3 className="font-display text-2xl font-extrabold text-[#0B2240]">
+                    <h3 className="font-display text-2xl font-extrabold text-[#0F2A44]">
                       ¡Solicitud recibida con éxito!
                     </h3>
                     <p className="max-w-md mx-auto text-sm sm:text-base text-slate-600">
                       Gracias,{" "}
-                      <span className="font-semibold text-[#0B2240]">
+                      <span className="font-semibold text-[#0F2A44]">
                         {formState.name}
                       </span>
                       . Nuestro equipo de ingeniería revisará los detalles de tu
                       proyecto de{" "}
                       <span className="font-semibold">{formState.service}</span>{" "}
-                      y te contactará en menos de 24 horas hábiles.
+                      y te contactará a la brevedad.
                     </p>
                     <button
                       type="button"
@@ -337,7 +337,7 @@ export function TrustBlogContactFooter() {
                           message: "",
                         });
                       }}
-                      className="mt-4 inline-flex items-center gap-2 rounded-lg bg-[#0B2240] px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white hover:bg-[#133563] cursor-pointer"
+                      className="mt-4 inline-flex items-center gap-2 rounded-lg bg-[#0F2A44] px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white hover:bg-[#133563] cursor-pointer"
                     >
                       Enviar otra consulta
                     </button>
@@ -345,7 +345,7 @@ export function TrustBlogContactFooter() {
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-5">
                     <div>
-                      <h3 className="font-display text-2xl font-extrabold text-[#0B2240]">
+                      <h3 className="font-display text-2xl font-extrabold text-[#0F2A44]">
                         Cuéntanos sobre tu proyecto
                       </h3>
                       <p className="text-sm text-slate-500 mt-1">
@@ -367,7 +367,7 @@ export function TrustBlogContactFooter() {
                           onChange={(e) =>
                             setFormState({ ...formState, name: e.target.value })
                           }
-                          className="w-full rounded-xl border border-slate-200 bg-[#F8FAFC] px-4 py-3 text-sm outline-none focus:border-[#0B2240] focus:bg-white transition-colors"
+                          className="w-full rounded-xl border border-slate-200 bg-[#F8FAFC] px-4 py-3 text-sm outline-none focus:border-[#0F2A44] focus:bg-white transition-colors"
                         />
                       </div>
                       <div>
@@ -384,7 +384,7 @@ export function TrustBlogContactFooter() {
                               company: e.target.value,
                             })
                           }
-                          className="w-full rounded-xl border border-slate-200 bg-[#F8FAFC] px-4 py-3 text-sm outline-none focus:border-[#0B2240] focus:bg-white transition-colors"
+                          className="w-full rounded-xl border border-slate-200 bg-[#F8FAFC] px-4 py-3 text-sm outline-none focus:border-[#0F2A44] focus:bg-white transition-colors"
                         />
                       </div>
                       <div>
@@ -402,7 +402,7 @@ export function TrustBlogContactFooter() {
                               email: e.target.value,
                             })
                           }
-                          className="w-full rounded-xl border border-slate-200 bg-[#F8FAFC] px-4 py-3 text-sm outline-none focus:border-[#0B2240] focus:bg-white transition-colors"
+                          className="w-full rounded-xl border border-slate-200 bg-[#F8FAFC] px-4 py-3 text-sm outline-none focus:border-[#0F2A44] focus:bg-white transition-colors"
                         />
                       </div>
                       <div>
@@ -419,7 +419,7 @@ export function TrustBlogContactFooter() {
                               phone: e.target.value,
                             })
                           }
-                          className="w-full rounded-xl border border-slate-200 bg-[#F8FAFC] px-4 py-3 text-sm outline-none focus:border-[#0B2240] focus:bg-white transition-colors"
+                          className="w-full rounded-xl border border-slate-200 bg-[#F8FAFC] px-4 py-3 text-sm outline-none focus:border-[#0F2A44] focus:bg-white transition-colors"
                         />
                       </div>
                     </div>
@@ -436,7 +436,7 @@ export function TrustBlogContactFooter() {
                             service: e.target.value,
                           })
                         }
-                        className="w-full rounded-xl border border-slate-200 bg-[#F8FAFC] px-4 py-3 text-sm outline-none focus:border-[#0B2240] focus:bg-white transition-colors"
+                        className="w-full rounded-xl border border-slate-200 bg-[#F8FAFC] px-4 py-3 text-sm outline-none focus:border-[#0F2A44] focus:bg-white transition-colors"
                       >
                         <option value="Diseño Estructural NSR-10">
                           Diseño Estructural NSR-10 (Concreto / Acero)
@@ -473,7 +473,7 @@ export function TrustBlogContactFooter() {
                             message: e.target.value,
                           })
                         }
-                        className="w-full rounded-xl border border-slate-200 bg-[#F8FAFC] px-4 py-3 text-sm outline-none focus:border-[#0B2240] focus:bg-white transition-colors resize-none"
+                        className="w-full rounded-xl border border-slate-200 bg-[#F8FAFC] px-4 py-3 text-sm outline-none focus:border-[#0F2A44] focus:bg-white transition-colors resize-none"
                       />
                     </div>
 
@@ -487,7 +487,7 @@ export function TrustBlogContactFooter() {
                             accepted: e.target.checked,
                           })
                         }
-                        className="rounded border-slate-300 accent-[#E68A00]"
+                        className="rounded border-slate-300 accent-[#C46A2B]"
                       />
                       <span>
                         Acepto el aviso de privacidad y confidencialidad
@@ -497,7 +497,7 @@ export function TrustBlogContactFooter() {
 
                     <button
                       type="submit"
-                      className="w-full inline-flex items-center justify-center gap-2.5 rounded-xl bg-[#E68A00] hover:bg-[#d17d00] px-6 py-4 text-sm font-bold text-white shadow-lg shadow-[#E68A00]/25 transition-all cursor-pointer"
+                      className="w-full inline-flex items-center justify-center gap-2.5 rounded-xl bg-[#C46A2B] hover:bg-[#AD5A21] px-6 py-4 text-sm font-bold text-white shadow-lg shadow-[#C46A2B]/25 transition-all cursor-pointer"
                     >
                       <Send className="h-4 w-4" />
                       Enviar solicitud de cotización
@@ -511,7 +511,7 @@ export function TrustBlogContactFooter() {
       </section>
 
       {/* SECTION 10: FOOTER */}
-      <footer className="bg-[#061326] text-slate-300 border-t border-white/10">
+      <footer className="bg-[#091B2E] text-slate-300 border-t border-white/10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
             <div className="md:col-span-5 space-y-4">
@@ -530,7 +530,7 @@ export function TrustBlogContactFooter() {
                   <li key={l.href}>
                     <a
                       href={l.href}
-                      className="text-slate-400 hover:text-[#F59E0B] transition-colors"
+                      className="text-slate-400 hover:text-[#C46A2B] transition-colors"
                     >
                       {l.label}
                     </a>
@@ -564,7 +564,7 @@ export function TrustBlogContactFooter() {
             </p>
             <a
               href="#inicio"
-              className="inline-flex items-center gap-1.5 font-mono text-slate-300 hover:text-[#F59E0B] transition-colors"
+              className="inline-flex items-center gap-1.5 font-mono text-slate-300 hover:text-[#C46A2B] transition-colors"
             >
               Volver arriba
               <ArrowUp className="h-3.5 w-3.5" />
@@ -581,7 +581,7 @@ export function TrustBlogContactFooter() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setSelectedArticle(null)}
-            className="fixed inset-0 z-[90] bg-[#061326]/80 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto"
+            className="fixed inset-0 z-[90] bg-[#091B2E]/80 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto"
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.94, y: 20 }}
@@ -589,7 +589,7 @@ export function TrustBlogContactFooter() {
               exit={{ opacity: 0, scale: 0.94, y: 20 }}
               transition={{ duration: 0.35, ease: EASE_ARCHITECTURAL }}
               onClick={(e) => e.stopPropagation()}
-              className="w-full max-w-2xl rounded-3xl bg-white text-[#0B2240] shadow-2xl overflow-hidden my-auto"
+              className="w-full max-w-2xl rounded-3xl bg-white text-[#0F2A44] shadow-2xl overflow-hidden my-auto"
             >
               <div className="relative h-60 w-full">
                 <Image
@@ -598,16 +598,16 @@ export function TrustBlogContactFooter() {
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#061326]/90 via-[#061326]/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#091B2E]/90 via-[#091B2E]/20 to-transparent" />
                 <button
                   type="button"
                   onClick={() => setSelectedArticle(null)}
-                  className="absolute top-4 right-4 rounded-full bg-white/90 p-2 text-[#0B2240] hover:bg-white cursor-pointer"
+                  className="absolute top-4 right-4 rounded-full bg-white/90 p-2 text-[#0F2A44] hover:bg-white cursor-pointer"
                 >
                   <X className="h-4 w-4" />
                 </button>
                 <div className="absolute bottom-5 left-6 right-6 text-white">
-                  <span className="font-mono text-[10px] uppercase tracking-widest text-[#F59E0B]">
+                  <span className="font-mono text-[10px] uppercase tracking-widest text-[#C46A2B]">
                     {selectedArticle.category} · {selectedArticle.readTime}
                   </span>
                   <h3 className="font-display text-2xl font-extrabold mt-1 leading-tight">
@@ -619,7 +619,7 @@ export function TrustBlogContactFooter() {
               <div className="p-6 sm:p-8 space-y-4">
                 <div className="flex items-center justify-between border-b border-slate-200 pb-4">
                   <div>
-                    <p className="text-sm font-bold text-[#0B2240]">
+                    <p className="text-sm font-bold text-[#0F2A44]">
                       {selectedArticle.author}
                     </p>
                     <p className="text-xs text-slate-500">

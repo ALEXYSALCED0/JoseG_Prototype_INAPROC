@@ -1,14 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --navy-950: #061326;
-  --navy-900: #0b2240;
-  --navy-800: #102d54;
-  --amber-500: #e68a00;
-  --amber-400: #f59e0b;
-  --ice-100: #e5effa;
-  --ice-50: #f4f7fb;
-  --cyan-tech: #38bdf8;
+  --brand-navy: #0f2a44;
+  --brand-navy-deep: #091b2e;
+  --brand-copper: #c46a2b;
+  --brand-steel: #3e5c76;
+  --brand-concrete: #8a857d;
+  --brand-sand: #f2ede4;
+  --brand-graphite: #1e2024;
 }
 
 @theme inline {
@@ -17,25 +16,25 @@
   --font-mono: var(--font-mono);
 }
 
+/* Official INAPROC Archivo Expanded wordmark utility */
+.font-wide {
+  font-family: var(--font-display), sans-serif;
+  font-stretch: 125%;
+}
+
 /* Architectural blueprint subtle grid background */
 .bg-blueprint-grid {
   background-image:
-    linear-gradient(to right, rgba(56, 189, 248, 0.07) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(56, 189, 248, 0.07) 1px, transparent 1px);
+    linear-gradient(to right, rgba(242, 237, 228, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(242, 237, 228, 0.06) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
 .bg-blueprint-grid-light {
   background-image:
-    linear-gradient(to right, rgba(11, 34, 64, 0.045) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(11, 34, 64, 0.045) 1px, transparent 1px);
+    linear-gradient(to right, rgba(15, 42, 68, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 42, 68, 0.045) 1px, transparent 1px);
   background-size: 48px 48px;
-}
-
-/* Blueprint wireframe filter effect for interactive CAD/Reality comparator */
-.blueprint-filter {
-  filter: grayscale(100%) contrast(165%) brightness(108%) invert(100%);
-  mix-blend-mode: screen;
 }
 
 /* Custom sleek scrollbar */
@@ -45,14 +44,14 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #f2ede4;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #94a3b8;
+  background: #8a857d;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #0b2240;
+  background: #0f2a44;
 }

@@ -54,7 +54,7 @@ export function SmoothScrollProvider({
       {/* Precision engineering top scroll progress line */}
       <motion.div
         style={{ scaleX }}
-        className="fixed top-0 left-0 right-0 h-[3px] origin-left bg-gradient-to-r from-[#38BDF8] via-[#E68A00] to-[#F59E0B] z-[70] pointer-events-none"
+        className="fixed top-0 left-0 right-0 h-[3px] origin-left bg-gradient-to-r from-[#3E5C76] via-[#C46A2B] to-[#F2EDE4] z-[70] pointer-events-none"
       />
       {children}
     </>

@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Inter, JetBrains_Mono } from "next/font/google";
+import { Archivo, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
-const plusJakarta = Plus_Jakarta_Sans({
+const archivo = Archivo({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: ["500", "600", "700", "800"],
+  weight: ["400", "600", "700", "800"],
 });
 
-const inter = Inter({
+const ibmPlexSans = IBM_Plex_Sans({
   variable: "--font-sans",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
-const jetbrainsMono = JetBrains_Mono({
+const ibmPlexMono = IBM_Plex_Mono({
   variable: "--font-mono",
   subsets: ["latin"],
   weight: ["400", "500", "600"],
@@ -24,15 +24,15 @@ export const metadata: Metadata = {
   title:
     "INAPROC S.A.S. | Ingeniería y Arquitectura de Proyectos Civiles · Barranquilla",
   description:
-    "Empresa líder en Barranquilla y Latinoamérica en diseño arquitectónico BIM, cálculo estructural NSR-10, ingeniería geotécnica, patología forense FEM/CFD, diseño hidráulico y construcción civil.",
+    "Empresa en Barranquilla especializada en diseño arquitectónico y renders 3D, diseño estructural NSR-10, geotecnia, patología estructural FEM/CFD, diseños hidráulicos, licencias y construcción civil.",
   keywords: [
-    "INAPROC SAS",
-    "ingeniería estructural Barranquilla",
-    "diseño arquitectónico BIM",
-    "NSR-10 Colombia",
-    "geotecnia y cimentaciones",
-    "patología estructural FEM CFD",
-    "licencias de construcción Barranquilla",
+    "INAPROC S.A.S.",
+    "Ingeniería y Arquitectura de Proyectos Civiles",
+    "Diseño Estructural NSR-10 Barranquilla",
+    "Ingeniería Geotécnica Colombia",
+    "Patología Estructural FEM CFD",
+    "RCM Engineering",
+    "Licencias de construcción Barranquilla",
   ],
   openGraph: {
     title: "INAPROC S.A.S. | Ingeniería y Arquitectura de Proyectos Civiles",
@@ -47,9 +47,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="es"
-      className={`${plusJakarta.variable} ${inter.variable} ${jetbrainsMono.variable} h-full antialiased scroll-smooth`}
+      className={`${archivo.variable} ${ibmPlexSans.variable} ${ibmPlexMono.variable} h-full antialiased scroll-smooth`}
     >
-      <body className="min-h-full bg-white text-[#0B2240] font-sans selection:bg-[#E68A00]/20 selection:text-[#0B2240] overflow-x-hidden">
+      <body className="min-h-full bg-white text-[#1E2024] font-sans selection:bg-[#C46A2B]/20 selection:text-[#0F2A44] overflow-x-hidden">
         {children}
       </body>
     </html>

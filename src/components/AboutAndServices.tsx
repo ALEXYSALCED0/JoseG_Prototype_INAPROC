@@ -48,14 +48,14 @@ export function AboutAndServices() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* Left Image with architectural curtain reveal */}
             <div className="lg:col-span-6 relative">
-              <BlueprintImageReveal className="relative rounded-2xl overflow-hidden shadow-2xl shadow-[#0B2240]/10 aspect-[4/3]">
+              <BlueprintImageReveal className="relative rounded-2xl overflow-hidden shadow-2xl shadow-[#0F2A44]/10 aspect-[4/3]">
                 <Image
                   src="/images/about-engineers.jpg"
                   alt="Ingenieros estructurales revisando planos en obra"
                   fill
                   className="object-cover transition-transform duration-700 hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-tr from-[#0B2240]/30 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-[#0F2A44]/30 via-transparent to-transparent" />
               </BlueprintImageReveal>
 
               {/* Floating glass experience card */}
@@ -64,7 +64,7 @@ export function AboutAndServices() {
                 whileInView={{ opacity: 1, y: 0, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: 0.35, ease: EASE_ARCHITECTURAL }}
-                className="absolute -bottom-5 right-4 sm:right-6 rounded-xl bg-[#0B2240] text-white px-5 py-4 shadow-xl border border-white/15"
+                className="absolute -bottom-5 right-4 sm:right-6 rounded-xl bg-[#0F2A44] text-white px-5 py-4 shadow-xl border border-white/15"
               >
                 <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-sky-300">
                   Sede Barranquilla · Desde 2015
@@ -80,13 +80,13 @@ export function AboutAndServices() {
 
             {/* Right Copy */}
             <div className="lg:col-span-6 space-y-6">
-              <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-[0.2em] text-[#E68A00]">
-                <span className="h-[2px] w-6 bg-[#E68A00]" />
+              <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-[0.2em] text-[#C46A2B]">
+                <span className="h-[2px] w-6 bg-[#C46A2B]" />
                 Sobre INAPROC S.A.S.
               </div>
 
               <RevealMask>
-                <h2 className="font-display text-3xl sm:text-4xl lg:text-[2.6rem] font-extrabold leading-[1.12] text-[#0B2240]">
+                <h2 className="font-display text-3xl sm:text-4xl lg:text-[2.6rem] font-extrabold leading-[1.12] text-[#0F2A44]">
                   Transformamos ideas en realidades tangibles, estéticas y seguras.
                 </h2>
               </RevealMask>
@@ -122,7 +122,7 @@ export function AboutAndServices() {
                     }}
                     className="flex items-start gap-3 text-slate-700 font-medium"
                   >
-                    <CheckCircle2 className="h-5 w-5 text-[#E68A00] shrink-0 mt-0.5" />
+                    <CheckCircle2 className="h-5 w-5 text-[#C46A2B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </motion.li>
                 ))}
@@ -131,7 +131,7 @@ export function AboutAndServices() {
               <div className="pt-3">
                 <MagneticButton
                   href="#contacto"
-                  className="inline-flex items-center gap-2.5 rounded-lg bg-[#E68A00] px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-[#E68A00]/25 hover:bg-[#d17d00] transition-colors"
+                  className="inline-flex items-center gap-2.5 rounded-lg bg-[#C46A2B] px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-[#C46A2B]/25 hover:bg-[#AD5A21] transition-colors"
                 >
                   Agenda una consultoría
                   <ArrowRight className="h-4 w-4" />
@@ -145,26 +145,27 @@ export function AboutAndServices() {
       {/* SECTION 3: SOLUCIONES INTEGRALES DE INGENIERÍA */}
       <section
         id="servicios"
-        className="relative py-20 lg:py-28 bg-[#F4F7FB] bg-blueprint-grid-light border-y border-slate-200/70"
+        className="relative py-20 lg:py-28 bg-[#F2EDE4] bg-blueprint-grid-light border-y border-[#8A857D]/20"
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <div className="max-w-2xl space-y-3">
-              <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-[0.2em] text-[#E68A00]">
-                <span className="h-[2px] w-6 bg-[#E68A00]" />
-                Especialidades
+              <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-[0.2em] text-[#C46A2B]">
+                <span className="h-[2px] w-6 bg-[#C46A2B]" />
+                Nuestros Servicios Especializados
               </div>
               <RevealMask>
-                <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-[#0B2240]">
-                  Soluciones integrales de ingeniería
+                <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-[#0F2A44]">
+                  Soluciones integrales en diseño y construcción civil
                 </h2>
               </RevealMask>
-              <p className="text-slate-600 text-base sm:text-lg">
-                Pasa el cursor o haz clic sobre cualquier especialidad para
-                explorar su alcance técnico y entregables.
+              <p className="text-[#3E5C76] text-base sm:text-lg">
+                Cada servicio es ejecutado por nuestro equipo multidisciplinario
+                de ingenieros y arquitectos. Haz clic en cualquier tarjeta para
+                ver el detalle completo.
               </p>
             </div>
-            <span className="font-mono text-xs uppercase tracking-wider text-slate-500">
+            <span className="font-mono text-xs uppercase tracking-wider text-[#3E5C76]">
               06 Áreas de especialidad
             </span>
           </div>
@@ -199,7 +200,7 @@ export function AboutAndServices() {
                         stiffness: 320,
                         damping: 30,
                       }}
-                      className="absolute inset-0 bg-[#0B2240] z-0"
+                      className="absolute inset-0 bg-[#0F2A44] z-0"
                     />
                   )}
 
@@ -209,8 +210,8 @@ export function AboutAndServices() {
                         <div
                           className={`flex h-12 w-12 items-center justify-center rounded-xl transition-colors duration-300 ${
                             isActive
-                              ? "bg-[#E68A00] text-white"
-                              : "bg-[#0B2240]/5 text-[#0B2240]"
+                              ? "bg-[#C46A2B] text-white"
+                              : "bg-[#0F2A44]/5 text-[#0F2A44]"
                           }`}
                         >
                           <Icon className="h-6 w-6" />
@@ -228,7 +229,7 @@ export function AboutAndServices() {
 
                       <h3
                         className={`font-display text-xl font-bold mb-2.5 transition-colors ${
-                          isActive ? "text-white" : "text-[#0B2240]"
+                          isActive ? "text-white" : "text-[#0F2A44]"
                         }`}
                       >
                         {service.title}
@@ -245,7 +246,7 @@ export function AboutAndServices() {
 
                     <div
                       className={`flex items-center gap-2 text-xs font-bold uppercase tracking-wider transition-colors ${
-                        isActive ? "text-[#F59E0B]" : "text-[#0B2240]"
+                        isActive ? "text-[#C46A2B]" : "text-[#0F2A44]"
                       }`}
                     >
                       <span>Ver alcance técnico</span>
@@ -264,9 +265,9 @@ export function AboutAndServices() {
             </p>
             <a
               href="#contacto"
-              className="inline-flex items-center gap-2 text-sm font-bold text-[#0B2240] hover:text-[#E68A00] transition-colors whitespace-nowrap"
+              className="inline-flex items-center gap-2 text-sm font-bold text-[#0F2A44] hover:text-[#C46A2B] transition-colors whitespace-nowrap"
             >
-              Solicitar propuesta a la medida
+              Contactar al departamento de proyectos
               <ArrowRight className="h-4 w-4" />
             </a>
           </div>
@@ -281,7 +282,7 @@ export function AboutAndServices() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setModalService(null)}
-            className="fixed inset-0 z-[80] bg-[#061326]/75 backdrop-blur-md flex items-center justify-center p-4"
+            className="fixed inset-0 z-[80] bg-[#091B2E]/75 backdrop-blur-md flex items-center justify-center p-4"
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.94, y: 20 }}
@@ -291,9 +292,9 @@ export function AboutAndServices() {
               onClick={(e) => e.stopPropagation()}
               className="w-full max-w-xl rounded-2xl bg-white shadow-2xl border border-slate-200 overflow-hidden"
             >
-              <div className="bg-[#0B2240] text-white p-6 flex items-start justify-between">
+              <div className="bg-[#0F2A44] text-white p-6 flex items-start justify-between">
                 <div>
-                  <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-[#F59E0B]">
+                  <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-[#C46A2B]">
                     {modalService.tag}
                   </span>
                   <h3 className="font-display text-2xl font-extrabold mt-1">
@@ -315,7 +316,7 @@ export function AboutAndServices() {
                 </p>
 
                 <div>
-                  <h4 className="font-mono text-xs uppercase tracking-wider text-[#0B2240] font-bold mb-3">
+                  <h4 className="font-mono text-xs uppercase tracking-wider text-[#0F2A44] font-bold mb-3">
                     Entregables principales
                   </h4>
                   <ul className="space-y-2">
@@ -324,18 +325,18 @@ export function AboutAndServices() {
                         key={del}
                         className="flex items-start gap-2.5 text-sm text-slate-700"
                       >
-                        <CheckCircle2 className="h-4 w-4 text-[#E68A00] shrink-0 mt-0.5" />
+                        <CheckCircle2 className="h-4 w-4 text-[#C46A2B] shrink-0 mt-0.5" />
                         <span>{del}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="rounded-xl bg-[#F4F7FB] border border-slate-200 px-4 py-3 flex items-center justify-between">
+                <div className="rounded-xl bg-[#F2EDE4] border border-slate-200 px-4 py-3 flex items-center justify-between">
                   <span className="font-mono text-xs text-slate-500">
                     Normativa aplicable
                   </span>
-                  <span className="font-mono text-xs font-semibold text-[#0B2240]">
+                  <span className="font-mono text-xs font-semibold text-[#0F2A44]">
                     {modalService.normative}
                   </span>
                 </div>
@@ -351,7 +352,7 @@ export function AboutAndServices() {
                   <a
                     href="#contacto"
                     onClick={() => setModalService(null)}
-                    className="inline-flex items-center gap-2 rounded-lg bg-[#E68A00] px-5 py-2.5 text-sm font-bold text-white hover:bg-[#d17d00]"
+                    className="inline-flex items-center gap-2 rounded-lg bg-[#C46A2B] px-5 py-2.5 text-sm font-bold text-white hover:bg-[#AD5A21]"
                   >
                     Cotizar este servicio
                     <ArrowRight className="h-4 w-4" />

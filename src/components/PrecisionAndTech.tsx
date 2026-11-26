@@ -23,13 +23,15 @@ import {
 export function PrecisionAndTech() {
   const [blueprintOverlay, setBlueprintOverlay] = useState(false);
   const [activeTech, setActiveTech] = useState<TechItem>(techData[0]);
-  const [seismicLoad, setSeismicLoad] = useState(1.4);
-  const [bimLayer, setBimLayer] = useState<"estructura" | "mep" | "clash">(
-    "estructura"
-  );
-
-  const computedStressMpa = Math.round(145 * seismicLoad);
-  const safetyFactor = (2.6 / seismicLoad).toFixed(2);
+  const [structuralMaterial, setStructuralMaterial] = useState<
+    "Concreto Armado" | "Acero Estructural" | "Mampostería" | "Madera"
+  >("Concreto Armado");
+  const [bimLayer, setBimLayer] = useState<
+    "Arquitectura 3D" | "Estructura NSR-10" | "HVAC & Hidrosanitaria"
+  >("Arquitectura 3D");
+  const [geoTechnique, setGeoTechnique] = useState<
+    "Columnas de Grava" | "Inclusiones Rígidas" | "Muros MSE y Gaviones"
+  >("Columnas de Grava");
 
   return (
     <>
@@ -39,10 +41,10 @@ export function PrecisionAndTech() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* Left Image with Interactive CAD Blueprint Toggle */}
             <div className="lg:col-span-6 relative">
-              <BlueprintImageReveal className="relative rounded-2xl overflow-hidden shadow-2xl shadow-[#0B2240]/12 aspect-[4/3] bg-[#0B2240]">
+              <BlueprintImageReveal className="relative rounded-2xl overflow-hidden shadow-2xl shadow-[#0F2A44]/12 aspect-[4/3] bg-[#0F2A44]">
                 <Image
                   src="/images/structure-frame.jpg"
-                  alt="Estructura reticular de concreto y acero en construcción"
+                  alt="Construcción de estructura civil en concreto armado y acero"
                   fill
                   className={`object-cover transition-all duration-700 ${
                     blueprintOverlay
@@ -59,7 +61,7 @@ export function PrecisionAndTech() {
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
                       transition={{ duration: 0.35 }}
-                      className="absolute inset-0 bg-[#0A254D]/65 bg-blueprint-grid mix-blend-hard-light pointer-events-none"
+                      className="absolute inset-0 bg-[#0F2A44]/70 bg-blueprint-grid mix-blend-hard-light pointer-events-none"
                     >
                       <motion.div
                         initial={{ top: "0%" }}
@@ -69,7 +71,7 @@ export function PrecisionAndTech() {
                           repeat: Infinity,
                           ease: "linear",
                         }}
-                        className="absolute left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#38BDF8] to-transparent shadow-[0_0_16px_#38BDF8]"
+                        className="absolute left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#C46A2B] to-transparent shadow-[0_0_16px_#C46A2B]"
                       />
                     </motion.div>
                   )}
@@ -79,48 +81,47 @@ export function PrecisionAndTech() {
                 <button
                   type="button"
                   onClick={() => setBlueprintOverlay((prev) => !prev)}
-                  className="absolute top-4 left-4 z-10 inline-flex items-center gap-2 rounded-full bg-[#0B2240]/85 hover:bg-[#0B2240] text-white px-3.5 py-2 text-xs font-mono uppercase tracking-wider border border-white/20 backdrop-blur-md shadow-lg transition-all cursor-pointer"
+                  className="absolute top-4 left-4 z-10 inline-flex items-center gap-2 rounded-full bg-[#0F2A44]/90 hover:bg-[#0F2A44] text-[#F2EDE4] px-3.5 py-2 text-xs font-mono uppercase tracking-wider border border-white/20 backdrop-blur-md shadow-lg transition-all cursor-pointer"
                 >
-                  <Eye className="h-3.5 w-3.5 text-[#38BDF8]" />
+                  <Eye className="h-3.5 w-3.5 text-[#C46A2B]" />
                   <span>
                     {blueprintOverlay ? "Modo Fotografía" : "Modo Escáner CAD"}
                   </span>
                 </button>
 
-                <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between rounded-xl bg-[#061326]/80 backdrop-blur-md px-4 py-2.5 border border-white/10 text-xs text-slate-200 font-mono">
-                  <span>EJE ESTRUCTURAL A-14 // ACERO A992</span>
-                  <span className="text-[#F59E0B]">TOL: ±1.2 mm</span>
+                <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between rounded-xl bg-[#091B2E]/85 backdrop-blur-md px-4 py-2.5 border border-white/10 text-xs text-[#F2EDE4] font-mono">
+                  <span>NORMATIVA NSR-10 · CONCRETO Y ACERO</span>
+                  <span className="text-[#C46A2B] font-semibold">BIM + APU</span>
                 </div>
               </BlueprintImageReveal>
             </div>
 
             {/* Right Content */}
             <div className="lg:col-span-6 space-y-6">
-              <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-[0.2em] text-[#E68A00]">
-                <span className="h-[2px] w-6 bg-[#E68A00]" />
-                Nuestro Enfoque
+              <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-[0.2em] text-[#C46A2B]">
+                <span className="h-[2px] w-6 bg-[#C46A2B]" />
+                Metodología de Proyecto
               </div>
 
               <RevealMask>
-                <h2 className="font-display text-3xl sm:text-4xl lg:text-[2.6rem] font-extrabold leading-[1.12] text-[#0B2240]">
-                  Diseño estructural de precisión desde el inicio.
+                <h2 className="font-display text-3xl sm:text-4xl lg:text-[2.55rem] font-extrabold leading-[1.12] text-[#0F2A44]">
+                  Precisión técnica en diseño y ejecución de principio a fin.
                 </h2>
               </RevealMask>
 
-              <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
-                Cada milímetro calculado en gabinete se traduce en certidumbre
-                financiera y velocidad de montaje en obra. Activa el modo
-                escáner CAD sobre la imagen para visualizar nuestra trazabilidad
-                técnica.
+              <p className="text-[#3E5C76] text-base sm:text-lg leading-relaxed">
+                Acompañamos cada proyecto con comunicación directa presencial o
+                virtual, desde la visita técnica en campo hasta la entrega
+                garantizada de la obra.
               </p>
 
               <ul className="space-y-3 pt-1">
                 {[
-                  "Ingeniería conceptual y de valor desde la factibilidad.",
-                  "Modelos analíticos calibrados contra sismo, viento y vibración.",
-                  "Planos ejecutivos con despiece claro para taller y obra.",
-                  "Coordinación continua con arquitectura y especialidades MEP.",
-                  "Acompañamiento técnico y visitas de verificación en sitio.",
+                  "Visitas de campo en el Atlántico, estudios de suelo y diagnóstico técnico.",
+                  "Presupuestos precisos mediante Análisis de Precios Unitarios (APU).",
+                  "Cálculo estructural bajo normativa NSR-10 en concreto, acero, mampostería y madera.",
+                  "Ejecución apoyada en BIM para actualizar modificaciones en tiempo real.",
+                  "Garantía escrita de obra de 6 meses a 1 año en estructura e instalaciones.",
                 ].map((item, idx) => (
                   <motion.li
                     key={item}
@@ -132,9 +133,9 @@ export function PrecisionAndTech() {
                       delay: idx * 0.08,
                       ease: EASE_ARCHITECTURAL,
                     }}
-                    className="flex items-start gap-3 text-slate-700 font-medium text-sm sm:text-base"
+                    className="flex items-start gap-3 text-[#1E2024] font-medium text-sm sm:text-base"
                   >
-                    <CheckCircle2 className="h-5 w-5 text-[#E68A00] shrink-0 mt-0.5" />
+                    <CheckCircle2 className="h-5 w-5 text-[#C46A2B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </motion.li>
                 ))}
@@ -143,9 +144,9 @@ export function PrecisionAndTech() {
               <div className="pt-2">
                 <MagneticButton
                   href="#contacto"
-                  className="inline-flex items-center gap-2.5 rounded-lg bg-[#E68A00] px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-[#E68A00]/25 hover:bg-[#d17d00] transition-colors"
+                  className="inline-flex items-center gap-2.5 rounded-lg bg-[#C46A2B] px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-[#C46A2B]/25 hover:bg-[#AD5A21] transition-colors"
                 >
-                  Solicitar asesoría técnica
+                  Solicitar asesoría con INAPROC
                   <ArrowRight className="h-4 w-4" />
                 </MagneticButton>
               </div>
@@ -154,36 +155,36 @@ export function PrecisionAndTech() {
         </div>
       </section>
 
-      {/* SECTION 5: TECHNOLOGY BAND (BIM / FEM / SIG) */}
+      {/* SECTION 5: TECHNOLOGY BAND (BIM / FEM / GEOTECNIA) */}
       <section
         id="tecnologia"
-        className="relative py-20 lg:py-28 bg-[#0B2240] text-white overflow-hidden"
+        className="relative py-20 lg:py-28 bg-[#0F2A44] text-[#F2EDE4] overflow-hidden"
       >
         <div className="absolute inset-0 bg-blueprint-grid opacity-70 pointer-events-none" />
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <div className="max-w-2xl space-y-3">
-              <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-[0.2em] text-[#38BDF8]">
-                <span className="h-[2px] w-6 bg-[#38BDF8]" />
-                Ecosistema Digital
+              <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-[0.2em] text-[#C46A2B]">
+                <span className="h-[2px] w-6 bg-[#C46A2B]" />
+                Innovación Digital & RCM©
               </div>
               <RevealMask>
                 <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-white">
-                  Tecnología al servicio de la ingeniería
+                  Tecnología aplicada a la ingeniería civil
                 </h2>
               </RevealMask>
-              <p className="text-slate-300 text-base sm:text-lg">
-                Selecciona una plataforma tecnológica para interactuar con sus
-                parámetros y simulaciones en tiempo real.
+              <p className="text-[#F2EDE4]/80 text-base sm:text-lg">
+                Selecciona una especialidad tecnológica para explorar nuestras
+                herramientas de diseño, modelación y geotecnia.
               </p>
             </div>
-            <span className="font-mono text-xs uppercase tracking-wider text-sky-300/80">
-              BIM // FEM // SIG
+            <span className="font-mono text-xs uppercase tracking-wider text-[#F2EDE4]/70">
+              BIM · FEM / CFD · RCM Engineering©
             </span>
           </div>
 
-          {/* 3 Flagship Tech Cards matching Figma */}
+          {/* 3 Flagship Tech Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {techData.map((tech, idx) => {
               const isSelected = activeTech.id === tech.id;
@@ -202,19 +203,19 @@ export function PrecisionAndTech() {
                   }}
                   className={`group text-left rounded-2xl overflow-hidden border transition-all duration-300 cursor-pointer ${
                     isSelected
-                      ? "border-[#38BDF8] bg-[#102E56] shadow-[0_0_35px_rgba(56,189,248,0.2)] -translate-y-1"
-                      : "border-white/12 bg-[#081A33] hover:border-white/30"
+                      ? "border-[#C46A2B] bg-[#16385A] shadow-[0_0_35px_rgba(196,106,43,0.22)] -translate-y-1"
+                      : "border-white/12 bg-[#091B2E] hover:border-white/30"
                   }`}
                 >
-                  <div className="relative h-48 w-full overflow-hidden bg-[#051020]">
+                  <div className="relative h-48 w-full overflow-hidden bg-[#061321]">
                     <Image
                       src={tech.image}
                       alt={tech.title}
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-108"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#081A33] via-transparent to-transparent" />
-                    <span className="absolute top-3 left-3 rounded-md bg-[#061326]/85 px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider text-sky-300 border border-sky-400/25">
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#091B2E] via-transparent to-transparent" />
+                    <span className="absolute top-3 left-3 rounded-md bg-[#091B2E]/90 px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider text-[#F2EDE4] border border-[#C46A2B]/40">
                       {tech.code}
                     </span>
                   </div>
@@ -227,15 +228,15 @@ export function PrecisionAndTech() {
                       <span
                         className={`h-2.5 w-2.5 rounded-full transition-colors ${
                           isSelected
-                            ? "bg-[#E68A00] shadow-[0_0_10px_#E68A00]"
+                            ? "bg-[#C46A2B] shadow-[0_0_10px_#C46A2B]"
                             : "bg-white/20"
                         }`}
                       />
                     </div>
-                    <p className="text-xs font-mono text-sky-300">
+                    <p className="text-xs font-mono text-[#C46A2B]">
                       {tech.subtitle}
                     </p>
-                    <p className="text-sm text-slate-300 leading-relaxed pt-1">
+                    <p className="text-sm text-[#F2EDE4]/80 leading-relaxed pt-1">
                       {tech.description}
                     </p>
                   </div>
@@ -244,7 +245,7 @@ export function PrecisionAndTech() {
             })}
           </div>
 
-          {/* Interactive Tech Lab Stage */}
+          {/* Interactive Tech Stage */}
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTech.id}
@@ -252,94 +253,91 @@ export function PrecisionAndTech() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -12 }}
               transition={{ duration: 0.4, ease: EASE_ARCHITECTURAL }}
-              className="mt-8 rounded-2xl border border-white/15 bg-[#07162C]/90 backdrop-blur-xl p-6 sm:p-8"
+              className="mt-8 rounded-2xl border border-[#F2EDE4]/15 bg-[#091B2E]/90 backdrop-blur-xl p-6 sm:p-8"
             >
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                {/* Interactive Simulation Viewport */}
-                <div className="lg:col-span-6 relative rounded-xl overflow-hidden border border-sky-400/20 bg-[#040E1D] aspect-[16/10]">
+                {/* Interactive Viewport */}
+                <div className="lg:col-span-6 relative rounded-xl overflow-hidden border border-white/15 bg-[#061321] aspect-[16/10]">
                   <Image
                     src={activeTech.image}
                     alt={activeTech.subtitle}
                     fill
-                    className={`object-cover transition-all duration-500 ${
-                      activeTech.id === "fem" && seismicLoad > 1.8
-                        ? "saturate-150 contrast-125"
-                        : ""
-                    }`}
+                    className="object-cover"
                   />
 
-                  {/* Dynamic Interactive Overlay depending on selected tech */}
                   {activeTech.id === "bim" && (
-                    <div className="absolute inset-0 p-4 flex flex-col justify-between bg-gradient-to-t from-[#040E1D]/90 via-transparent to-[#040E1D]/40">
+                    <div className="absolute inset-0 p-4 flex flex-col justify-between bg-gradient-to-t from-[#061321]/90 via-transparent to-[#061321]/45">
                       <div className="flex flex-wrap gap-2">
                         {(
                           [
-                            { id: "estructura", label: "Estructura Acero" },
-                            { id: "mep", label: "Coordinación MEP" },
-                            { id: "clash", label: "0 Colisiones" },
+                            "Arquitectura 3D",
+                            "Estructura NSR-10",
+                            "HVAC & Hidrosanitaria",
                           ] as const
                         ).map((tab) => (
                           <button
-                            key={tab.id}
+                            key={tab}
                             type="button"
-                            onClick={() => setBimLayer(tab.id)}
+                            onClick={() => setBimLayer(tab)}
                             className={`rounded-full px-3 py-1 font-mono text-[11px] border transition-all cursor-pointer ${
-                              bimLayer === tab.id
-                                ? "bg-[#38BDF8] text-[#040E1D] border-[#38BDF8] font-bold"
-                                : "bg-[#061326]/80 text-slate-200 border-white/20 hover:bg-white/10"
+                              bimLayer === tab
+                                ? "bg-[#C46A2B] text-white border-[#C46A2B] font-bold"
+                                : "bg-[#091B2E]/85 text-[#F2EDE4] border-white/20 hover:bg-white/10"
                             }`}
                           >
-                            {tab.label}
+                            {tab}
                           </button>
                         ))}
                       </div>
-                      <div className="flex items-center justify-between text-xs font-mono text-sky-200">
+                      <div className="flex items-center justify-between text-xs font-mono text-[#F2EDE4]">
                         <span className="flex items-center gap-1.5">
-                          <Layers className="h-3.5 w-3.5 text-[#E68A00]" />
-                          CAPA ACTIVA: {bimLayer.toUpperCase()}
+                          <Layers className="h-3.5 w-3.5 text-[#C46A2B]" />
+                          ESPECIALIDAD: {bimLayer.toUpperCase()}
                         </span>
-                        <span>MODELO FEDERADO IFC 4.3</span>
+                        <span>RENDERS 3D & BIM</span>
                       </div>
                     </div>
                   )}
 
                   {activeTech.id === "fem" && (
-                    <div className="absolute inset-0 p-4 flex flex-col justify-between bg-gradient-to-t from-[#040E1D]/95 via-transparent to-[#040E1D]/40">
-                      <div className="flex items-center justify-between font-mono text-xs">
-                        <span className="rounded bg-[#061326]/85 px-2.5 py-1 border border-amber-400/30 text-amber-300">
-                          ESFUERZO PICO: {computedStressMpa} MPa
-                        </span>
-                        <span className="rounded bg-[#061326]/85 px-2.5 py-1 border border-emerald-400/30 text-emerald-300">
-                          F. SEGURIDAD: {safetyFactor}x
-                        </span>
+                    <div className="absolute inset-0 p-4 flex flex-col justify-between bg-gradient-to-t from-[#061321]/92 via-transparent to-[#061321]/45">
+                      <div className="flex flex-wrap gap-2">
+                        {(
+                          [
+                            "Concreto Armado",
+                            "Acero Estructural",
+                            "Mampostería",
+                            "Madera",
+                          ] as const
+                        ).map((mat) => (
+                          <button
+                            key={mat}
+                            type="button"
+                            onClick={() => setStructuralMaterial(mat)}
+                            className={`rounded-full px-3 py-1 font-mono text-[11px] border transition-all cursor-pointer ${
+                              structuralMaterial === mat
+                                ? "bg-[#C46A2B] text-white border-[#C46A2B] font-bold"
+                                : "bg-[#091B2E]/85 text-[#F2EDE4] border-white/20 hover:bg-white/10"
+                            }`}
+                          >
+                            {mat}
+                          </button>
+                        ))}
                       </div>
-                      <div className="rounded-lg bg-[#061326]/85 border border-white/15 p-3 backdrop-blur-md">
-                        <div className="flex items-center justify-between text-[11px] font-mono text-slate-300 mb-1.5">
-                          <span className="flex items-center gap-1.5">
-                            <SlidersHorizontal className="h-3.5 w-3.5 text-[#38BDF8]" />
-                            Simular aceleración sísmica
-                          </span>
-                          <span className="text-[#F59E0B] font-bold">
-                            {seismicLoad.toFixed(1)}g
-                          </span>
-                        </div>
-                        <input
-                          type="range"
-                          min="1.0"
-                          max="2.5"
-                          step="0.1"
-                          value={seismicLoad}
-                          onChange={(e) =>
-                            setSeismicLoad(parseFloat(e.target.value))
-                          }
-                          className="w-full accent-[#E68A00] cursor-pointer"
-                        />
+                      <div className="rounded-lg bg-[#091B2E]/90 border border-white/15 p-3 backdrop-blur-md flex items-center justify-between text-[11px] font-mono text-[#F2EDE4]">
+                        <span className="flex items-center gap-1.5">
+                          <SlidersHorizontal className="h-3.5 w-3.5 text-[#C46A2B]" />
+                          SISTEMA: {structuralMaterial.toUpperCase()}
+                        </span>
+                        <span className="text-[#C46A2B] font-bold">
+                          NSR-10 · FEM / CFD
+                        </span>
                       </div>
                     </div>
                   )}
 
                   {activeTech.id === "sig" && (
-                    <div className="absolute inset-0 p-4 flex flex-col justify-between pointer-events-none">
+                    <div className="absolute inset-0 p-4 flex flex-col justify-between bg-gradient-to-t from-[#061321]/90 via-transparent to-[#061321]/40">
                       <motion.div
                         animate={{ top: ["10%", "88%", "10%"] }}
                         transition={{
@@ -347,33 +345,52 @@ export function PrecisionAndTech() {
                           repeat: Infinity,
                           ease: "easeInOut",
                         }}
-                        className="absolute left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-cyan-300 to-transparent shadow-[0_0_18px_#22d3ee]"
+                        className="absolute left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#C46A2B] to-transparent shadow-[0_0_18px_#C46A2B] pointer-events-none"
                       />
-                      <div className="inline-flex w-fit items-center gap-2 rounded-full bg-[#061326]/85 px-3 py-1 font-mono text-[11px] text-cyan-300 border border-cyan-400/30">
-                        <Radar className="h-3.5 w-3.5 animate-spin" />
-                        ESCANEO LIDAR EN VIVO
+                      <div className="flex flex-wrap gap-2 relative z-10">
+                        {(
+                          [
+                            "Columnas de Grava",
+                            "Inclusiones Rígidas",
+                            "Muros MSE y Gaviones",
+                          ] as const
+                        ).map((geo) => (
+                          <button
+                            key={geo}
+                            type="button"
+                            onClick={() => setGeoTechnique(geo)}
+                            className={`rounded-full px-3 py-1 font-mono text-[11px] border transition-all cursor-pointer ${
+                              geoTechnique === geo
+                                ? "bg-[#C46A2B] text-white border-[#C46A2B] font-bold"
+                                : "bg-[#091B2E]/85 text-[#F2EDE4] border-white/20 hover:bg-white/10"
+                            }`}
+                          >
+                            {geo}
+                          </button>
+                        ))}
                       </div>
-                      <div className="flex items-center justify-between font-mono text-[11px] text-slate-300 bg-[#061326]/80 rounded-lg px-3 py-2 border border-white/10">
-                        <span>WGS84 // UTM Z14N</span>
-                        <span className="text-cyan-300">
-                          DENSIDAD: 180 PTS/m²
+                      <div className="flex items-center justify-between font-mono text-[11px] text-[#F2EDE4] bg-[#091B2E]/85 rounded-lg px-3 py-2 border border-white/10 relative z-10">
+                        <span className="flex items-center gap-1.5">
+                          <Radar className="h-3.5 w-3.5 text-[#C46A2B]" />
+                          {geoTechnique.toUpperCase()}
                         </span>
+                        <span>CO · MX · PA</span>
                       </div>
                     </div>
                   )}
                 </div>
 
-                {/* Tech Telemetry Metrics & Details */}
+                {/* Tech Details */}
                 <div className="lg:col-span-6 space-y-6">
                   <div>
-                    <div className="flex items-center gap-2 font-mono text-xs text-[#F59E0B] uppercase tracking-wider">
+                    <div className="flex items-center gap-2 font-mono text-xs text-[#C46A2B] uppercase tracking-wider">
                       <Cpu className="h-4 w-4" />
-                      Laboratorio Interactivo // {activeTech.title}
+                      Capacidades INAPROC // {activeTech.title}
                     </div>
                     <h3 className="font-display text-2xl sm:text-3xl font-extrabold text-white mt-1.5">
                       {activeTech.subtitle}
                     </h3>
-                    <p className="text-slate-300 text-sm sm:text-base mt-2 leading-relaxed">
+                    <p className="text-[#F2EDE4]/80 text-sm sm:text-base mt-2 leading-relaxed">
                       {activeTech.description}
                     </p>
                   </div>
@@ -384,10 +401,10 @@ export function PrecisionAndTech() {
                         key={m.label}
                         className="rounded-xl bg-white/5 border border-white/10 p-3.5"
                       >
-                        <p className="font-display text-lg sm:text-xl font-extrabold text-[#38BDF8]">
+                        <p className="font-display text-base sm:text-lg font-extrabold text-[#F2EDE4]">
                           {m.value}
                         </p>
-                        <p className="text-[11px] text-slate-300 mt-0.5">
+                        <p className="text-[11px] text-[#F2EDE4]/70 mt-0.5">
                           {m.label}
                         </p>
                       </div>
@@ -398,9 +415,9 @@ export function PrecisionAndTech() {
                     {activeTech.highlights.map((hl) => (
                       <li
                         key={hl}
-                        className="flex items-center gap-2.5 text-sm text-slate-200"
+                        className="flex items-center gap-2.5 text-sm text-[#F2EDE4]/90"
                       >
-                        <CheckCircle2 className="h-4 w-4 text-[#E68A00] shrink-0" />
+                        <CheckCircle2 className="h-4 w-4 text-[#C46A2B] shrink-0" />
                         <span>{hl}</span>
                       </li>
                     ))}
@@ -414,4 +431,3 @@ export function PrecisionAndTech() {
     </>
   );
 }
-
