@@ -64,12 +64,12 @@ export interface ArticleItem {
 }
 
 export const companyConfig = {
-  name: "INNOVEC",
+  name: "INAPROC",
   tagline: "Ingeniería & Diseño Estructural",
   description:
     "Firma especializada en diseño estructural de alta complejidad, modelado BIM integral, análisis sísmico avanzado y gerencia técnica de obras.",
   phone: "+52 (55) 4890-3210",
-  email: "contacto@innovec-ing.com",
+  email: "contacto@inaproc-ing.com",
   address: "Av. Paseo de la Reforma 412, Piso 14 · CDMX",
   schedule: "Lun – Vie · 8:30 a 18:30 hrs",
   stats: [

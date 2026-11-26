@@ -21,7 +21,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "INNOVEC | Ingeniería Estructural, Diseño BIM & Consultoría",
+  title: "INAPROC | Ingeniería Estructural, Diseño BIM & Consultoría",
   description:
     "Construimos soluciones desde el diseño hasta la ingeniería. Modelado BIM, análisis sísmico FEM, infraestructura y gerencia de proyectos de alta precisión.",
   keywords: [
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     "supervisión de obra",
   ],
   openGraph: {
-    title: "INNOVEC | Ingeniería Estructural y Diseño BIM",
+    title: "INAPROC | Ingeniería Estructural y Diseño BIM",
     description:
       "Soluciones integrales de ingeniería estructural, modelado BIM y tecnología aplicada a proyectos de alto impacto.",
     type: "website",

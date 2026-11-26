@@ -723,7 +723,7 @@ export function InteractiveProjectsGallery() {
                       </div>
                       <div>
                         <span className="font-mono text-[11px] font-bold uppercase text-[#0B2240]">
-                          Solución INNOVEC
+                          Solución INAPROC
                         </span>
                         <p className="text-sm text-slate-600 mt-0.5">
                           {lightboxProject.solution}
