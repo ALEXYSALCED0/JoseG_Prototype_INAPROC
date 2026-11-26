@@ -13,7 +13,6 @@ import {
   Cpu,
   Handshake,
   Mail,
-  MapPin,
   Phone,
   Send,
   Target,
@@ -240,12 +239,6 @@ export function TrustBlogContactFooter() {
                     label: "Correo corporativo",
                     value: companyConfig.email,
                     copyable: true,
-                  },
-                  {
-                    icon: MapPin,
-                    label: `Oficina Barranquilla · ${companyConfig.schedule}`,
-                    value: companyConfig.address,
-                    copyable: false,
                   },
                 ].map((item) => {
                   const Icon = item.icon;
@@ -543,7 +536,6 @@ export function TrustBlogContactFooter() {
               <h4 className="font-mono text-xs uppercase tracking-widest text-white font-bold">
                 Contacto
               </h4>
-              <p className="text-sm text-slate-400">{companyConfig.address}</p>
               <p className="text-sm text-slate-400">
                 {companyConfig.phone} ({companyConfig.phoneContact})
               </p>
