@@ -67,13 +67,13 @@ export function AboutAndServices() {
                 className="absolute -bottom-5 right-4 sm:right-6 rounded-xl bg-[#0B2240] text-white px-5 py-4 shadow-xl border border-white/15"
               >
                 <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-sky-300">
-                  Certificación & Rigor
+                  Sede Barranquilla · Desde 2015
                 </p>
                 <p className="font-display text-xl font-extrabold mt-0.5">
-                  +350,000 m²
+                  +5 Países
                 </p>
                 <p className="text-xs text-slate-300">
-                  en proyectos ejecutivos entregados
+                  Costa Caribe, Colombia y Latinoamérica
                 </p>
               </motion.div>
             </div>
@@ -82,12 +82,12 @@ export function AboutAndServices() {
             <div className="lg:col-span-6 space-y-6">
               <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-[0.2em] text-[#E68A00]">
                 <span className="h-[2px] w-6 bg-[#E68A00]" />
-                Sobre Nosotros
+                Sobre INAPROC S.A.S.
               </div>
 
               <RevealMask>
                 <h2 className="font-display text-3xl sm:text-4xl lg:text-[2.6rem] font-extrabold leading-[1.12] text-[#0B2240]">
-                  Ingeniería que transforma ideas en realidades seguras.
+                  Transformamos ideas en realidades tangibles, estéticas y seguras.
                 </h2>
               </RevealMask>
 
@@ -98,17 +98,17 @@ export function AboutAndServices() {
                 transition={{ duration: 0.6, delay: 0.15 }}
                 className="text-slate-600 text-base sm:text-lg leading-relaxed"
               >
-                Somos una firma multidisciplinaria dedicada al cálculo,
-                coordinación digital y supervisión estructural. Acompañamos a
-                desarrolladores, arquitectos e industrias desde el concepto hasta
-                el último detalle constructivo.
+                Con sede en Barranquilla, capital del Caribe colombiano, INAPROC
+                S.A.S. diseña y construye edificaciones modernas, complejos
+                arquitectónicos, puentes, soluciones geotécnicas y proyectos de
+                valor histórico con presencia en Colombia, México y Panamá.
               </motion.p>
 
               <ul className="space-y-3.5 pt-1">
                 {[
-                  "Optimización estructural de acero y concreto sin sacrificar seguridad.",
-                  "Flujos BIM colaborativos con cero colisiones antes de ir a obra.",
-                  "Cumplimiento estricto de normativas sísmicas NTC, ACI y AISC.",
+                  "Estructuras en concreto armado, acero, mampostería y madera bajo NSR-10.",
+                  "Arquitectura, renders tridimensionales, tecnología BIM e instalaciones HVAC.",
+                  "Patología estructural, ensayos no destructivos y modelación numérica FEM/CFD.",
                 ].map((item, idx) => (
                   <motion.li
                     key={item}

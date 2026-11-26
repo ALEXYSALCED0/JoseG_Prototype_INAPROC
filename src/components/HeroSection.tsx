@@ -103,11 +103,11 @@ export function HeroSection() {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#E68A00]" />
               </span>
               <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-sky-200">
-                Ingeniería & Diseño Estructural
+                INAPROC S.A.S. · Barranquilla & Latinoamérica
               </span>
             </motion.div>
 
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-[3.6rem] font-extrabold leading-[1.06] tracking-tight text-white">
+            <h1 className="font-display text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.06] tracking-tight text-white">
               <span className="block overflow-hidden">
                 <motion.span
                   initial={{ y: "110%" }}
@@ -136,12 +136,14 @@ export function HeroSection() {
               transition={{ duration: 0.7, delay: 0.35, ease: EASE_ARCHITECTURAL }}
               className="max-w-xl text-base sm:text-lg text-slate-300 leading-relaxed"
             >
-              Combinamos cálculo estructural de alta precisión, modelado{" "}
-              <span className="text-white font-semibold">BIM LOD 400</span> y
-              simulación{" "}
-              <span className="text-white font-semibold">FEM sísmica</span> para
-              materializar edificaciones e infraestructura segura, esbelta y
-              rentable.
+              Edificios, viviendas, puentes y obras civiles que impulsan el
+              futuro de Colombia y América Latina. Unimos diseño{" "}
+              <span className="text-white font-semibold">BIM & Renders 3D</span>
+              , cálculo{" "}
+              <span className="text-white font-semibold">NSR-10</span>,{" "}
+              <span className="text-white font-semibold">Geotecnia</span> y
+              modelación{" "}
+              <span className="text-white font-semibold">FEM / CFD</span>.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -189,7 +191,7 @@ export function HeroSection() {
                   </span>
                 </div>
                 <span className="rounded bg-emerald-400/15 px-2 py-0.5 font-mono text-[10px] font-semibold text-emerald-300 border border-emerald-400/25">
-                  NORMA OK
+                  NSR-10 OK
                 </span>
               </div>
 

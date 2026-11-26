@@ -428,7 +428,7 @@ export function InteractiveProjectsGallery() {
                     <div className="grid grid-cols-2 gap-3">
                       <div className="rounded-xl bg-white/5 border border-white/10 p-3.5">
                         <span className="text-[11px] font-mono text-slate-400 uppercase">
-                          Superficie / Luz
+                          Alcance / Sector
                         </span>
                         <p className="font-display text-lg font-bold text-white mt-0.5">
                           {filteredProjects[cinemaIndex].area}
@@ -436,7 +436,7 @@ export function InteractiveProjectsGallery() {
                       </div>
                       <div className="rounded-xl bg-white/5 border border-white/10 p-3.5">
                         <span className="text-[11px] font-mono text-slate-400 uppercase">
-                          Acero Estructural
+                          Sistema / Material
                         </span>
                         <p className="font-display text-lg font-bold text-[#F59E0B] mt-0.5">
                           {filteredProjects[cinemaIndex].steelTons}
@@ -696,7 +696,7 @@ export function InteractiveProjectsGallery() {
                     <div className="grid grid-cols-2 gap-3 pt-2">
                       <div className="rounded-xl bg-[#F4F7FB] p-3 border border-slate-200">
                         <span className="font-mono text-[10px] uppercase text-slate-500">
-                          Superficie / Luz
+                          Alcance / Sector
                         </span>
                         <p className="font-display font-bold text-[#0B2240]">
                           {lightboxProject.area}
@@ -704,7 +704,7 @@ export function InteractiveProjectsGallery() {
                       </div>
                       <div className="rounded-xl bg-[#F4F7FB] p-3 border border-slate-200">
                         <span className="font-mono text-[10px] uppercase text-slate-500">
-                          Acero Estructural
+                          Sistema / Material
                         </span>
                         <p className="font-display font-bold text-[#0B2240]">
                           {lightboxProject.steelTons}

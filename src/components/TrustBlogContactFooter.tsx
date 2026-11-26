@@ -47,7 +47,7 @@ export function TrustBlogContactFooter() {
     company: "",
     email: "",
     phone: "",
-    service: "Diseño Estructural",
+    service: "Diseño Estructural NSR-10",
     message: "",
     accepted: true,
   });
@@ -225,8 +225,14 @@ export function TrustBlogContactFooter() {
                 {[
                   {
                     icon: Phone,
-                    label: "Teléfono directo",
+                    label: `Proyectos · ${companyConfig.phoneContact}`,
                     value: companyConfig.phone,
+                    copyable: true,
+                  },
+                  {
+                    icon: Phone,
+                    label: `Atención · ${companyConfig.secondaryPhoneContact}`,
+                    value: companyConfig.secondaryPhone,
                     copyable: true,
                   },
                   {
@@ -237,7 +243,7 @@ export function TrustBlogContactFooter() {
                   },
                   {
                     icon: MapPin,
-                    label: "Oficinas centrales",
+                    label: `Oficina Barranquilla · ${companyConfig.schedule}`,
                     value: companyConfig.address,
                     copyable: false,
                   },
@@ -405,7 +411,7 @@ export function TrustBlogContactFooter() {
                         </label>
                         <input
                           type="tel"
-                          placeholder="+52 (55) 0000 0000"
+                          placeholder="+57 300 000 0000"
                           value={formState.phone}
                           onChange={(e) =>
                             setFormState({
@@ -432,20 +438,23 @@ export function TrustBlogContactFooter() {
                         }
                         className="w-full rounded-xl border border-slate-200 bg-[#F8FAFC] px-4 py-3 text-sm outline-none focus:border-[#0B2240] focus:bg-white transition-colors"
                       >
-                        <option value="Diseño Estructural">
-                          Diseño Estructural (Acero / Concreto)
+                        <option value="Diseño Estructural NSR-10">
+                          Diseño Estructural NSR-10 (Concreto / Acero)
                         </option>
-                        <option value="Modelado BIM LOD 400">
-                          Modelado BIM LOD 400 & Coordinación
+                        <option value="Diseño Arquitectónico y BIM">
+                          Diseño Arquitectónico, Renders 3D & BIM
                         </option>
-                        <option value="Análisis Sísmico y FEM">
-                          Análisis Sísmico Avanzado y FEM
+                        <option value="Ingeniería Geotécnica">
+                          Geotecnia, Cimentaciones y Estabilidad de Taludes
                         </option>
-                        <option value="Infraestructura y Puentes">
-                          Infraestructura Civil & Puentes
+                        <option value="Patología Estructural FEM/CFD">
+                          Patología Estructural, NDT y Modelación FEM / CFD
                         </option>
-                        <option value="Consultoría / Peer Review">
-                          Consultoría Técnica & Revisión por Pares
+                        <option value="Diseño Hidráulico y Piscinas">
+                          Diseño Hidráulico, Hidrosanitario, PTAR y Piscinas
+                        </option>
+                        <option value="Construcción Civil y Licencias">
+                          Construcción Civil Llave en Mano & Licencias
                         </option>
                       </select>
                     </div>
@@ -535,7 +544,12 @@ export function TrustBlogContactFooter() {
                 Contacto
               </h4>
               <p className="text-sm text-slate-400">{companyConfig.address}</p>
-              <p className="text-sm text-slate-400">{companyConfig.phone}</p>
+              <p className="text-sm text-slate-400">
+                {companyConfig.phone} ({companyConfig.phoneContact})
+              </p>
+              <p className="text-sm text-slate-400">
+                {companyConfig.secondaryPhone} ({companyConfig.secondaryPhoneContact})
+              </p>
               <p className="text-sm text-slate-400">{companyConfig.email}</p>
               <p className="text-xs font-mono text-slate-500 pt-1">
                 {companyConfig.schedule}
@@ -545,8 +559,8 @@ export function TrustBlogContactFooter() {
 
           <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
             <p>
-              © 2026 {companyConfig.name} Ingeniería Estructural. Todos los
-              derechos reservados.
+              © 2015 – 2026 {companyConfig.legalName} —{" "}
+              {companyConfig.tagline}. Todos los derechos reservados.
             </p>
             <a
               href="#inicio"

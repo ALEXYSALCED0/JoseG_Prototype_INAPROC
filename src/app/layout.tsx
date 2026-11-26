@@ -21,23 +21,25 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "INAPROC | Ingeniería Estructural, Diseño BIM & Consultoría",
+  title:
+    "INAPROC S.A.S. | Ingeniería y Arquitectura de Proyectos Civiles · Barranquilla",
   description:
-    "Construimos soluciones desde el diseño hasta la ingeniería. Modelado BIM, análisis sísmico FEM, infraestructura y gerencia de proyectos de alta precisión.",
+    "Empresa líder en Barranquilla y Latinoamérica en diseño arquitectónico BIM, cálculo estructural NSR-10, ingeniería geotécnica, patología forense FEM/CFD, diseño hidráulico y construcción civil.",
   keywords: [
-    "ingeniería estructural",
-    "diseño BIM",
-    "análisis FEM",
-    "infraestructura civil",
-    "consultoría estructural",
-    "supervisión de obra",
+    "INAPROC SAS",
+    "ingeniería estructural Barranquilla",
+    "diseño arquitectónico BIM",
+    "NSR-10 Colombia",
+    "geotecnia y cimentaciones",
+    "patología estructural FEM CFD",
+    "licencias de construcción Barranquilla",
   ],
   openGraph: {
-    title: "INAPROC | Ingeniería Estructural y Diseño BIM",
+    title: "INAPROC S.A.S. | Ingeniería y Arquitectura de Proyectos Civiles",
     description:
-      "Soluciones integrales de ingeniería estructural, modelado BIM y tecnología aplicada a proyectos de alto impacto.",
+      "Desde el diseño hasta la entrega final: excelencia, confiabilidad y precisión técnica en proyectos civiles en Colombia y América Latina.",
     type: "website",
-    locale: "es_MX",
+    locale: "es_CO",
   },
 };
 

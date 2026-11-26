@@ -50,7 +50,7 @@ export function BrandLogo({ dark = false }: { dark?: boolean }) {
             dark ? "text-slate-300" : "text-slate-500"
           }`}
         >
-          Ingeniería
+          S.A.S. · Proyectos Civiles
         </span>
       </div>
     </a>
